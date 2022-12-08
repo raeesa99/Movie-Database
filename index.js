@@ -14,7 +14,7 @@ app.set('views', './views');
 
 app.get('/', (req, res) =>{
     console.log(fetch);
-    res.render('index', {pageName: 'Home'});
+    res.render('home', {pageName: 'Home'});
 });
 
 app.get('/movies', (req, res) => {
