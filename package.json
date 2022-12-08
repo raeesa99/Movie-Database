@@ -1,5 +1,24 @@
 {
   "dependencies": {
+    "express": "^4.18.2",
     "express-handlebars": "^6.0.6"
-  }
+  },
+  "name": "moviedatabase",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raeesa99/movieDatabase.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raeesa99/movieDatabase/issues"
+  },
+  "homepage": "https://github.com/raeesa99/movieDatabase#readme",
+  "description": ""
 }
