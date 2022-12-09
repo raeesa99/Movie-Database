@@ -33,6 +33,10 @@ app.get('/movies', async (req, res) => {
     res.render('movies', {data});
 });
 
+app.get('/movieinfo', (req, res) => {
+    res.render('movieinfo', {data});
+});
+
 app.listen(5000, () => {
     console.log('server is listening on http:localhost:5000')
 });
