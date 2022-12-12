@@ -1,8 +1,10 @@
 const express = require('express');
 const path = require('path');
 const { engine } = require('express-handlebars');
-
+const fetch = require('node-fetch');
 const app = express();
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({extended: true}));
@@ -13,13 +15,9 @@ app.set('view engine', '.hbs');
 app.set('views', './views');
 
 app.get('/', (req, res) =>{
-    console.log(fetch);
     res.render('home', {pageName: 'Home'});
 });
 
-// app.get('/movies', (req, res) => {
-//     res.render('movies', {pageName: 'movies'});
-// });
 
 app.get('/', (req, res) => {
     res.send('hello')
