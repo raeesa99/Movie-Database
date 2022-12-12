@@ -1,6 +1,6 @@
-<div>
- {{#each movies}}
-    <a href="/movies/{{@key}}">
+{{!-- <div>
+ {{#each obj}}
+    <a href="/movieinfo/{{@key}}">
     <div class="cover">
         <h2>{{title}}</h2>
     </div>
@@ -8,4 +8,10 @@
 
     {{/each}}
 
-</div>
+</div> --}}
+
+<h1>Upcoming Movies</h1>
+<ul>
+    <li>Movie: {{title}}</li>
+    <li>Poster: {{image}}</li>
+    </ul>
