@@ -29,14 +29,13 @@ app.get('/movies', async (req, res) => {
     let data = await fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=caf170e550f9e4c80f6cd7464404b60b&language=en-GB&page=1')
     data = await data.json();
     console.log(data);
-
     res.render('movies', {data});
 });
 
-app.get('/movieinfo', (req, res) => {
-    res.render('movieinfo', {data});
-});
+// app.get('/movieinfo', (req, res) => {
+//     res.render('movieinfo', {data});
+// });
 
 app.listen(5000, () => {
-    console.log('server is listening on http:localhost:5000')
+    console.log('app listening on http://localhost:5000')
 });
