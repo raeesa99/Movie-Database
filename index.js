@@ -14,14 +14,14 @@ app.engine('.hbs', engine({extname: '.hbs'}));
 app.set('view engine', '.hbs');
 app.set('views', './views');
 
-app.get('/', (req, res) =>{
-    res.render('home', {pageName: 'Home'});
-});
+// app.get('/', (req, res) =>{
+//     res.render('home', {pageName: 'Home'});
+// });
 
 
-app.get('/', (req, res) => {
-    res.send('hello')
-});
+// app.get('/', (req, res) => {
+//     res.send('hello')
+// });
 
 app.get('/movies', async (req, res) => {
     let data = await fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=caf170e550f9e4c80f6cd7464404b60b&language=en-GB');
@@ -30,7 +30,7 @@ app.get('/movies', async (req, res) => {
     // console.log(data);
 
     let movies = data.results.map((movie) => {
-        return {title: movie.title, image: 'https://image.tmdb.org/t/p/w500' + movie.poster_path}
+        return {title: movie.title, image: 'https://image.tmdb.org/t/p/w300' + movie.poster_path}
     })
 
         console.log(movies);

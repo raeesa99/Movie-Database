@@ -1,19 +1,16 @@
 <h1>Upcoming Movies</h1>
 
-<div id="movie-container">
+<div id="movieContainer">
 
 {{#each movies}}
 
     <a href="/movies/{{@key}}">
 
-    <h2>{{title}}</h2>
-
-    <div class="cover">
-        <img src="{{image}}"">
-    </div>
+    <h2 id="movieTitle">{{title}}</h2>
+    <img id="moviePoster" src="{{image}}">
 
     </a>
-    
+
 {{/each}}
 
 </div>
