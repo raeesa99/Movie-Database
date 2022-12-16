@@ -24,28 +24,27 @@ app.get('/', (req, res) => {
 });
 
 app.get('/movies', async (req, res) => {
-    let data = await fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=caf170e550f9e4c80f6cd7464404b60b&language=en-GB&page=1')
+    let data = await fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=caf170e550f9e4c80f6cd7464404b60b');
+    // res.render('movies', {data});
     data = await data.json();
     // console.log(data);
 
-    let obj = [
-        {title: data.results[0].original_title,
-        image: data.results[0].poster_path}
-    ];
+    let movies = data.results.map((movie) => {
+        return {title: movie.title, image: movie.poster_path}
+    })
 
-    //for each title and image, obj.push info
 
-        console.log(obj);
-        res.render('movies', obj);
+        console.log(movies);
+        res.render('movies', {movies});
 });
 
-app.get('/movieinfo', (req, res) => {
-    res.render('movieinfo', {obj});
-});
+// app.get('/movieinfo', (req, res) => {
+//     res.render('movies', {movies});
+// });
 
-app.get('/movies/:movieID', (req, res) => {
-    res.render('movieinfo', obj[req.params.movieID]);
-});
+// app.get('/movies/:movieID', (req, res) => {
+//     res.render('movieinfo', movies[req.params.movieID]);
+// });
 
 app.listen(5000, () => {
     console.log('app listening on http://localhost:5000')
