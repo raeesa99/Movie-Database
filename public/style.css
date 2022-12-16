@@ -5,7 +5,7 @@ html, body {
     font-family: 'Manjari', sans-serif;
 }
 
-#navbar {
+/* #navbar {
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -13,7 +13,7 @@ html, body {
     justify-content: space-around;
     margin: 10px;
     padding: 5px 5px 5px 5px;
-    /* background-color: #D3D3D3; */
+    background-color: #D3D3D3;
     width:100%;
     height: 5%;
 }
@@ -21,13 +21,17 @@ html, body {
 .nav-item > a {
     text-decoration: none;
 
-}
+} */
 
 h1{
     font-weight: 900;
     font-size: 50px;
     text-align: center;
     color: #660708;
+}
+
+h2 {
+    font-size: 30px;
 }
 
 ul{
@@ -40,15 +44,20 @@ a {
     text-decoration: none;
 }
 
-#movieContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.movieContainer {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
 }
 
-#moviePoster {
-    margin: 10px;
+.eachMovie {
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  border: 1px solid rgba(152, 35, 35, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+img {
+    align-items: center;
 }

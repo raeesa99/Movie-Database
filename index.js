@@ -14,18 +14,8 @@ app.engine('.hbs', engine({extname: '.hbs'}));
 app.set('view engine', '.hbs');
 app.set('views', './views');
 
-// app.get('/', (req, res) =>{
-//     res.render('home', {pageName: 'Home'});
-// });
-
-
-// app.get('/', (req, res) => {
-//     res.send('hello')
-// });
-
 app.get('/movies', async (req, res) => {
     let data = await fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=caf170e550f9e4c80f6cd7464404b60b&language=en-GB');
-    // res.render('movies', {data});
     data = await data.json();
     // console.log(data);
 
@@ -33,7 +23,7 @@ app.get('/movies', async (req, res) => {
         return {title: movie.title, image: 'https://image.tmdb.org/t/p/w300' + movie.poster_path}
     })
 
-        console.log(movies);
+        // console.log(movies);
         res.render('movies', {movies});
 });
 
