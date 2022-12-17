@@ -32,6 +32,12 @@ h1{
 
 h2 {
     font-size: 30px;
+    color: #660708;
+}
+
+p {
+    font-size: 30px;
+    color: #660708;
 }
 
 ul{
@@ -45,19 +51,24 @@ a {
 }
 
 .movieContainer {
-    display: inline-grid;
+    display: grid;
     grid-template-columns: auto auto auto;
-    padding: 10px;
+    padding: 14px 14px 14px 14px;
+    
 }
 
 .eachMovie {
   /* background-color: rgba(255, 255, 255, 0.8); */
-  border: 1px solid rgba(152, 35, 35, 0.8);
+  border: 1px solid #F5F3F4;
   padding: 20px;
   font-size: 30px;
   text-align: center;
 }
 
-img {
-    align-items: center;
+h2:hover {
+   text-shadow: 3px 3px 3px #370617;
+}
+
+img:hover {
+   box-shadow: 6px 6px 14px #370617;
 }

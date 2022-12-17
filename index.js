@@ -20,20 +20,26 @@ app.get('/movies', async (req, res) => {
     // console.log(data);
 
     let movies = data.results.map((movie) => {
-        return {title: movie.title, image: 'https://image.tmdb.org/t/p/w300' + movie.poster_path}
-    })
+        return {
+            title: movie.title,
+            image: 'https://image.tmdb.org/t/p/w300' + movie.poster_path,
+            release: movie.release_date,
+            plot: movie.overview,
+            //similar movies??
+        };
+    });
 
         // console.log(movies);
         res.render('movies', {movies});
 });
 
-// app.get('/movieinfo', (req, res) => {
-//     res.render('movies', {movies});
-// });
+app.get('/movies/:movieID', async (req, res) => {
+    res.render('movieinfo', movies[req.params.movieID]);
+});
 
-// app.get('/movies/:movieID', (req, res) => {
-//     res.render('movieinfo', movies[req.params.movieID]);
-// });
+app.get('*', (req, res) => {
+    res.render('404');
+})
 
 app.listen(5000, () => {
     console.log('app listening on http://localhost:5000')
