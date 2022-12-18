@@ -2,10 +2,10 @@ html, body {
     background-color: #0B090A;
     padding: 0px;
     margin: 0px 0px 0px 0px;
-    font-family: 'Manjari', sans-serif;
+    font-family: 'Encode Sans SC', sans-serif;
 }
 
-/* #navbar {
+#navbar {
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -14,25 +14,52 @@ html, body {
     margin: 10px;
     padding: 5px 5px 5px 5px;
     background-color: #D3D3D3;
-    width:100%;
     height: 5%;
 }
 
 .nav-item > a {
     text-decoration: none;
 
-} */
+}
+
+.home {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   padding: 40px;
+   margin: 20px;
+}
+
+#welcome {
+    padding-top: 30px;
+    font-size: 60px;
+}
+
+#middle {
+    padding-top: 50px;
+    font-size: 45px;
+}
+
+#linkToMovies {
+    font-size: 42px;
+}
+
+#credits{
+    padding-top: 50px;
+}
 
 h1{
     font-weight: 900;
-    font-size: 50px;
+    font-size: 60px;
     text-align: center;
     color: #660708;
 }
 
 h2 {
     font-size: 30px;
-    color: #660708;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 p {
@@ -58,19 +85,19 @@ a {
 }
 
 .eachMovie {
-  /* background-color: rgba(255, 255, 255, 0.8); */
-  border: 1px solid #F5F3F4;
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: 1px solid #F5F3F4;
+    padding: 15px;
+    font-size: 25px;
+    text-align: center;
 }
 
-h2:hover {
-   text-shadow: 3px 3px 3px #370617;
-}
-
-img:hover {
-   box-shadow: 6px 6px 14px #370617;
+a:hover {
+    text-shadow: 12px 12px 10px #370617;
 }
 
 .movieInfoContainer {

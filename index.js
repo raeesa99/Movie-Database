@@ -14,6 +14,11 @@ app.engine('.hbs', engine({extname: '.hbs'}));
 app.set('view engine', '.hbs');
 app.set('views', './views');
 
+app.get('/', (req, res) =>{
+    // console.log(fetch);
+    res.render('home', {pageName: 'Home'});
+});
+
 app.get('/movies', async (req, res) => {
     let data = await fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=caf170e550f9e4c80f6cd7464404b60b&language=en-GB');
     data = await data.json();
