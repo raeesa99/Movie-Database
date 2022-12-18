@@ -36,14 +36,14 @@ app.get('/movies', async (req, res) => {
 app.get('/movies/:movieID', async (req, res) => {
     let data = await fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=caf170e550f9e4c80f6cd7464404b60b&language=en-GB');
     data = await data.json();
-    
+    // console.log(data)
     let movies = data.results.map((movie) => {
         return {
             title: movie.title,
             image: 'https://image.tmdb.org/t/p/w300' + movie.poster_path,
             release: movie.release_date,
             plot: movie.overview,
-            //similar movies??
+            similar: `https://api.themoviedb.org/3/movie/${movie.id}/similar?api_key=caf170e550f9e4c80f6cd7464404b60b&language=en-GB`
         };
     });
     res.render('movieinfo', movies[req.params.movieID]);

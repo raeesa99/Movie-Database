@@ -1,7 +1,7 @@
 html, body {
     background-color: #0B090A;
-    padding: 0px;
-    margin: 0px 0px 0px 0px;
+    padding: 0;
+    margin: 0;
     font-family: 'Encode Sans SC', sans-serif;
 }
 
@@ -11,14 +11,18 @@ html, body {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    margin: 10px;
     padding: 5px 5px 5px 5px;
-    background-color: #D3D3D3;
     height: 5%;
 }
 
 .nav-item > a {
     text-decoration: none;
+
+}
+
+.nav-item > a:hover {
+    background-color: #660708;
+    color: #D3D3D3;
 
 }
 
@@ -44,6 +48,10 @@ html, body {
 
 #linkToMovies {
     font-size: 42px;
+}
+
+#linkToMovies:hover {
+    text-shadow: 12px 12px 10px #370617;
 }
 
 #credits{
@@ -96,7 +104,7 @@ a {
     text-align: center;
 }
 
-a:hover {
+#movieLink:hover {
     text-shadow: 12px 12px 10px #370617;
 }
 
@@ -106,5 +114,34 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+}
+
+#sidebyside {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+ #movieTitle {
+    font-size: 40px;
+ }
+
+#movieRelease {
+    font-size: 25px;
+}
+
+#plot {
+    font-size: 22px;
+    width:30%;
+    margin-left: 20px;
+    text-align:justify;
+}
+
+#similar {
+    margin: 5px;
+    font-size: 30px;
+    color: #D3D3D3;
     text-align: center;
 }

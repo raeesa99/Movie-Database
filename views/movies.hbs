@@ -3,7 +3,7 @@
 <div class="movieContainer">
     {{#each movies}}
         <div class="eachMovie">
-            <a href="/movies/{{@key}}">
+            <a id="movieLink" href="/movies/{{@key}}">
                 <h2 id="movieTitle">{{title}}</h2>
                 <img id="moviePoster" src="{{image}}">
             </a>
